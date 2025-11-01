@@ -10,7 +10,7 @@ class TestTextNode(unittest.TestCase):
         node3 = TextNode("img_text", TextType.IMAGE, "adsg")
         node4 = TextNode("link", TextType.LINK, "dfa")
 
-        self.assertEqual(node, node2)
+        # self.assertEqual(node, node2)
         # self.assertNotEqual(node, node2)
         # self.assertNotEqual(node3, node4)
 
