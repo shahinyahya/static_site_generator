@@ -1,6 +1,7 @@
 from src.textnode import TextType, TextNode
 from src.leafnode import LeafNode
 from src.htmlnode import HTMLNode
+from src.splitnode import split_nodes_delimiter, split_nodes_image, split_nodes_link
 
 def text_node_to_html_node(text_node):
     if text_node.text_type == TextType.TEXT:
@@ -27,3 +28,17 @@ def text_node_to_html_node(text_node):
     
     else:
         raise Exception(f"Unknown TextType: {text_node.text_type}")
+
+def text_to_textnodes(text):
+    # Single text node
+    nodes = [TextNode(text, TextType.TEXT)]
+    
+    # Apply your splitting function in order
+    nodes = split_nodes_delimiter(nodes, "**", TextType.BOLD)
+    nodes = split_nodes_delimiter(nodes, "_", TextType.ITALIC)
+    nodes = split_nodes_delimiter(nodes, "`", TextType.CODE)
+
+    nodes = split_nodes_image(nodes)
+    nodes = split_nodes_link(nodes)
+
+    return nodes
