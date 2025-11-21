@@ -12,7 +12,7 @@ class BlockType(Enum):
 def markdown_to_blocks(markdown):
     
     # Split double new line
-    raw_blocks = markdown.split("\n\n")
+    raw_blocks = re.split(r"\n\s*\n", markdown)
 
     blocks = []
     for block in raw_blocks:
