@@ -1,7 +1,7 @@
-from src.textnode import TextType, TextNode
-from src.leafnode import LeafNode
-from src.htmlnode import HTMLNode
-from src.splitnode import split_nodes_delimiter, split_nodes_image, split_nodes_link
+from textnode import TextType, TextNode
+from leafnode import LeafNode
+from htmlnode import HTMLNode
+from splitnode import split_nodes_delimiter, split_nodes_image, split_nodes_link
 
 def text_node_to_html_node(text_node):
     if text_node.text_type == TextType.TEXT:

@@ -1,7 +1,7 @@
 import unittest
 
-from src.htmlnode import HTMLNode
-from src.leafnode import LeafNode
+from htmlnode import HTMLNode
+from leafnode import LeafNode
 
 class TestHTMLNode(unittest.TestCase):
     def test_not_eq(self):

@@ -1,6 +1,6 @@
 import re
 
-from src.textnode import TextType,TextNode
+from textnode import TextType,TextNode
 
 '''
 Here, we're using markup and this function turns markup to HTML. 

@@ -1,8 +1,8 @@
 import unittest
 
-from src.splitnode import split_nodes_delimiter, split_nodes_image, split_nodes_link
-from src. textnode import TextType, TextNode
-from src.functions import text_to_textnodes
+from splitnode import split_nodes_delimiter, split_nodes_image, split_nodes_link
+from  textnode import TextType, TextNode
+from functions import text_to_textnodes
 
 class TestSplitNode(unittest.TestCase):
 
